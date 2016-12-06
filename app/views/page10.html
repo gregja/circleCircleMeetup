@@ -1,0 +1,19 @@
+<div>
+    <p>Nous avons placé notre algorithme de tracé du cercle dans la fonction draw(), qui est appelée plusieurs dizaines de fois par seconde. 
+        Pourquoi n'y a-t-il pas d'animation ?</p>
+    <p>Pour essayer de comprendre ce qui se passe, j'ai placé les fonctions Javascript console.time() et console.timeEnd(), au 
+        début et à la fin de la fonction draw(), dans le sketch de la page précédente. Vous pouvez donc le réafficher avec la console Javascript "ouverte" (cf. touche F12). </p>
+        <pre class="pre pre-javascript language-js" nag-prism><code>
+    function draw() {
+        console.time('sketch');
+        // ... 
+        console.timeEnd('sketch');
+    }
+</code></pre>
+    <p>Le temps moyen d'exécution se situe autour des 9 milli-secondes. On pourrait donc en théorie atteindre les 100 FPS.</p>
+</div>    
+    <p>
+        <a class="btn btn-md btn-success" ng-click="previousPage($event)" role="button">Previous page</a>
+        <a class="btn btn-md btn-success" ng-click="nextPage($event)" role="button">Next page</a>
+    </p>
+</div>

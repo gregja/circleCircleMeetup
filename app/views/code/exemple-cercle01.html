@@ -1,0 +1,20 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// 3 petites planètes 
+function setup() {
+    createCanvas(620, 200); // équivalent Processing : size(620, 300);
+    background(0);
+    noStroke();
+
+    // lune blanche
+    fill(255);
+    ellipse(252, 144, 100, 100);
+
+    // moitié supérieure d'une grosse planète gris clair
+    fill(200);
+    arc(479, 300, 280, 280, PI, TWO_PI);
+
+    // petite lune gris foncé
+    fill(150);
+    arc(width/2+40, height/2+60, 20, 20, 0, TWO_PI, CHORD);
+}
+</code></pre>

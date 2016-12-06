@@ -1,0 +1,17 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// génération de 100 cercles placés aléatoirement
+function setup() {
+  createCanvas(620, 300);
+  background(0);
+  noStroke();
+  frameRate(20); 
+}
+function draw() {
+  var posx = int(random(0, width));
+  var posy = int(random(0, height));
+  var ray = int(random(0, 100));
+  fill(random(1, 255));
+  ellipse(posx, posy, ray, ray);
+  if (frameCount > 100) noLoop();
+}
+</code></pre>

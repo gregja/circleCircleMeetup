@@ -1,0 +1,19 @@
+<div>
+    <p>
+On peut réduire le nombre de FPS en utilisant la fonction frameRate(). <br>
+On peut par exemple fixer le nombre de Frame par seconde à 20.</p>
+        <pre class="pre pre-javascript language-js" nag-prism><code>
+  frameRate(20);  // à placer de préférence dans la fonction setup()
+        </code></pre>
+    <p>
+Chaque appel de la fonction draw() a pour effet d'envoyer une nouvelle frame (image) au navigateur.
+On peut par exemple limiter le nombre d'appels de la fonction draw() à 100.
+    </p>
+        <pre class="pre pre-javascript language-js" nag-prism><code>
+  if (frameCount > 100) noLoop(); // à placer dans la fonction draw()
+        </code></pre>
+    <p>
+        <a class="btn btn-md btn-success" ng-click="previousPage($event)" role="button">Previous page</a>
+        <a class="btn btn-md btn-success" ng-click="nextPage($event)" role="button">Next page</a>
+    </p>
+</div>

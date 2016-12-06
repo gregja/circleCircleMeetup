@@ -1,0 +1,19 @@
+<pre class="pre pre-processing language-processing" nag-prism><code>
+// génération de 100 cercles placés aléatoirement
+void setup() {
+  size(620, 300);
+  background(0);
+  noStroke();
+  frameRate(20); 
+}
+void draw() {
+  // déclaration des variables à la façon de Java
+  int posx ; int posy ; int ray ;
+  posx = int(random(0, width)) ;
+  posy = int(random(0, height)) ;
+  ray = int(random(0, 100));
+  fill(random(1, 255));
+  ellipse(posx, posy, ray, ray);
+  if (frameCount > 100) noLoop();
+}
+</code></pre>

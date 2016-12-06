@@ -1,0 +1,5 @@
+ngView-animation-effects.sublime-project
+ngView-animation-effects.sublime-workspace
+scripts/*
+.idea/*
+/nbproject/private/

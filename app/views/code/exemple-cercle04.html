@@ -1,0 +1,21 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// Les variables suivantes sont des globales, elles sont donc accessibles
+//  dans les 2 fonctions setup() et draw()
+var i=0, rayon=100, posx=0, posy=0, pas_increment=.5; 
+
+function setup() {
+  createCanvas(620, 250);
+  noFill();
+  stroke('black');
+  posx = width/2 ;
+  posy = height/2;
+}
+function draw() {
+  var angle = radians(i);
+  var x = posx + rayon * cos(angle);
+  var y = posy + rayon * sin(angle);
+  point(x, y);
+  i = i + pas_increment;
+  if (i > 360) noLoop();
+}
+</code></pre>

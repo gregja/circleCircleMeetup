@@ -1,0 +1,20 @@
+<div>
+    <div>
+        Précalculer et stocker les coordonnées de notre cercle offre certains avantages.<br> 
+        On peut exploiter les données précalculées pour générer un effet de traîne. <br>
+        Pour ce faire, on va réutiliser le sketch précédent, mais pour chaque point "dessiné",
+        nous allons afficher les 5 points précédents avec un effet de dégradé. <br>
+        <pre class="pre pre-javascript language-js" nag-prism><code>// boucle de tracé des 5 points "suiveurs" à placer après le tracé du point principal
+for (var j = i-1 , k=0; j >= 0 && k<=5 ; j -= 1, k--) {
+    col += 5;  // effet de dégradé pour les points "suiveurs"
+    stroke(col);
+    point(data[j].x, data[j].y); // tracé des points "suiveurs"
+}</code></pre>
+        Exemple d'implémentation avec le sketch "cercle 06", que vous 
+        pouvez "exécuter" sur la page suivante<br>
+    </div>
+    <p>
+        <a class="btn btn-md btn-success" ng-click="previousPage($event)" role="button">Previous page</a>
+        <a class="btn btn-md btn-success" ng-click="nextPage($event)" role="button">Next page</a>
+    </p>
+</div>

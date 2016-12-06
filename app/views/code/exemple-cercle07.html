@@ -1,0 +1,47 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// Triangles aléatoires inscrits dans un cercle
+var x, y, posx, posy;
+var data = [];
+var ray = 150;
+var i, imax = 0;
+var pas = .5;
+
+function point_cercle(posx, posy, ray, angle) {
+  var x,y;
+  x=posx+ray*cos(angle);
+  y=posy+ray*sin(angle);
+  data.push({x:x, y:y}); 
+}
+
+function setup() {
+  createCanvas(620, 300);
+  fill(120, 10);
+  stroke(220);
+  posx = width/2;
+  posy = height/2;
+  
+  // précalcul du cercle pour stockage dans le tableau "data"
+  for (i = 0; i <= 360; i+= pas) {
+      point_cercle(posx, posy, ray, radians(i));
+  }
+  i = 0 ;
+  imax = data.length-1;
+
+  frameRate(20); // animation pas trop rapide pour avoir le temps de la voir ;)
+}
+
+function draw() {
+  var coords = [];
+  var tmppos ;
+  tmppos = int(random(0, imax));
+  coords.push({x:data[tmppos].x, y:data[tmppos].y});
+  tmppos = int(random(0, imax));
+  coords.push({x:data[tmppos].x, y:data[tmppos].y});
+  tmppos = int(random(0, imax));
+  coords.push({x:data[tmppos].x, y:data[tmppos].y});
+
+  triangle(coords[0].x, coords[0].y, coords[1].x, coords[1].y, coords[2].x, coords[2].y);
+    
+  if (frameCount > 200) noLoop();
+}
+</code></pre>

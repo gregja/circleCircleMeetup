@@ -1,0 +1,37 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// précalcul du cercle et stockage dans un tableau
+var x, y, i, imax, ray, pas, posx, posy;
+var data = [];
+ray = 200;
+i, imax = 0;
+pas = .5;
+
+function point_cercle(posx, posy, ray, angle) {
+  var x,y;
+  x = posx + ray * cos(angle);
+  y = posy + ray * sin(angle);
+  data.push({x:x, y:y}); 
+}
+
+function setup() {
+  createCanvas(620, 250);
+  noFill();
+  stroke('black');
+  posx = width/2;
+  posy = height/2;
+  for (i = 0; i <= 360; i+= pas) {
+      point_cercle(posx, posy, ray, radians(i));
+  }
+  i = 0 ;
+  imax = data.length;
+}
+
+function draw() {
+  if (i < imax) {
+      point(data[i].x, data[i].y);
+      i += 1;
+  } else {
+      noLoop();
+  }  
+}
+</code></pre>

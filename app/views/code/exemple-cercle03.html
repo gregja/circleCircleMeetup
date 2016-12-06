@@ -1,0 +1,21 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// je dessine mon cercle avec l'aide de ce bon vieux Pythagore
+function point_cercle(posx, posy, ray, angle) {
+  var x = posx + ray * cos(angle);
+  var y = posy + ray * sin(angle);
+  point(x, y);
+}
+function setup() {
+  createCanvas(620, 250);
+  noFill();
+  stroke('black');
+}
+function draw() {
+  var i, rayon = 100, pas_increment = .1;
+  var posx = width/2, posy = height/2;
+  for (i = 0 ; i <= 360; i += pas_increment) {
+      point_cercle(posx, posy, rayon, radians(i));
+  }
+  if (frameCount > 200) noLoop();
+}
+</code></pre>

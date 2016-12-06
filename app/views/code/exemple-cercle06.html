@@ -1,0 +1,46 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+// Tracé d'un cercle avec un effet de traîne
+var x, y, posx, posy;
+var data = []; // tableau des coordonnées XY
+var ray = 100;
+var i, imax = 0;
+var pas = .5;
+
+function point_cercle(posx, posy, ray, angle) {
+  var x,y;
+  x = posx + ray * cos(angle);
+  y = posy + ray * sin(angle);
+  data.push({x:x, y:y}); 
+}
+
+function setup() {
+  createCanvas(600, 600);
+  noFill();
+  stroke('black');
+  posx = width/2;
+  posy = height/2;
+  for (i = 0; i <= 360; i+= pas) {
+      point_cercle(posx, posy, ray, radians(i));
+  }
+  i = 0 ;
+  imax = data.length;
+}
+
+function draw() {
+  var col = 0; // premier point en noir
+  stroke(col);
+  if (i < imax) {
+      point(data[i].x, data[i].y); // le point principal (le "guide")
+      i += 1;
+      // boucle de tracé des 5 points "suiveurs"
+      for (var j = i-1 , k=0; j >= 0 && k<=5 ; j -= 1, k--) {
+        col += 5;  // effet de dégradé pour les points "suiveurs"
+        stroke(col);
+        point(data[j].x, data[j].y); // tracé des points "suiveurs"
+      }
+  } else {
+      noLoop();
+  }  
+}
+
+</code></pre>
