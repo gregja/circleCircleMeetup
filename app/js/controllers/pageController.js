@@ -1,6 +1,6 @@
 app.controller('pageController', ['$scope', '$location', '$routeParams', '$http', 'p5', function($scope, $location, $routeParams, $http, p5) {
 
-    $scope.maxPages = 22;
+    $scope.maxPages = 23;
     $scope.pageId = $routeParams.pageId || 1;
     
     $scope.nextPage = function($event) {

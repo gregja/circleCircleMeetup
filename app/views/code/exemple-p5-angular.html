@@ -1,0 +1,27 @@
+<pre class="pre pre-javascript language-js" nag-prism><code>
+ .factory('circleSketch01', ['p5', function(p5) {
+  return function(p) {
+    p.setup = function() {
+        p.createCanvas(620, 300); // équivalent Processing : size(620, 300);
+        p.background(0);
+        p.noStroke();
+
+        // small planet
+        p.fill(255);
+        p.ellipse(252, 144, 100, 100);
+
+        // big semi-planet
+        p.fill(200);
+        p.arc(479, 300, 280, 280, p.PI, p.TWO_PI);
+
+        // very small planet
+        p.fill(150);
+        p.arc(p.width/2+40, p.height/2+60, 20, 20, 0, p.TWO_PI, p.CHORD);
+        
+        p.textSize(10);
+        p.fill('red');
+        p.text("Cercle 01", p.width-80, p.height-10);
+    };
+  };
+}])  
+</code></pre> 

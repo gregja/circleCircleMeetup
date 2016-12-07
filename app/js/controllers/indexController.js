@@ -23,6 +23,7 @@ app.controller('indexController', ['$scope', '$route', 'p5', function($scope, $r
         {name: 'Cercle05 P5', sourceName: 'cercle05'},                
         {name: 'Cercle06 P5', sourceName: 'cercle06'},                
         {name: 'Cercle07 P5', sourceName: 'cercle07'},                
+        {name: 'P5 et Angular', sourceName: 'p5-angular'},                
     ];
 
     $scope.source = $scope.sources[0].className;

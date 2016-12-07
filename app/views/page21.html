@@ -1,10 +1,15 @@
 <div>
     <div>
-        <br><br>
-        <h1>Merci beaucoup</h1>
-    </div><br><br><br>
+        <h3>Utilisation de P5 avec Angular</h3>
+        <p>Cette page est destinée aux développeurs Javascript plus avancés.</p>
+        <p>L'utilisation de P5 avec Angular nécessite quelques ajustements au niveau des sketchs.</p>
+        <p>Dans l'application que vous êtes en train de consulter, les sketchs sont rattachés 
+            à un contrôleur Angular, sous la forme de "factories" Angular (une "factory" par sketch). <p>
+        <p>Cette architecture nécessite de modifier chaque appel de fonction angular pour le préfixer avec le code que vous avez défini en entrée de la fonction "factory" encapsulant le sketch (par exemple "p"). </p>
+        <p>Vous trouverez un exemple de code dans le source "P5 et Angular".</p>
+    </div><br><br>
     <p>
         <a class="btn btn-md btn-success" ng-click="previousPage($event)" role="button">Previous page</a>
-        <!--<a class="btn btn-md btn-success" ng-click="nextPage($event)" role="button">Next page</a>-->
+        <a class="btn btn-md btn-success" ng-click="nextPage($event)" role="button">Next page</a>
     </p>
 </div>
