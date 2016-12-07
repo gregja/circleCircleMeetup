@@ -1,0 +1,65 @@
+<pre class="pre pre-processing language-processing" nag-prism><code>
+// Triangles aléatoires inscrits dans un cercle (version Processing)
+int ray; 
+float pas_inc;
+float[] datax;
+float[] datay;
+float i;
+int imax;
+int posx; 
+int posy;
+float angle;
+int count;
+int j;
+
+void setup() {
+  size(600, 600);
+  fill(120, 10);
+  stroke(220);
+  ray = 200;
+  i = 0;
+  imax = 0;
+  pas_inc = .5;
+  posx = width/2;
+  posy = height/2;
+
+  count = int(360/pas_inc)+1;
+
+  datax = new float[count];
+  datay = new float[count];
+  j = 0;
+  // précalcul du cercle pour stockage dans le tableau "data"
+  for (i = 0; i <= 360; i+= pas_inc) {
+      angle = radians(i);
+      datax[j] = posx + ray * cos(angle);
+      datay[j] = posy + ray * sin(angle);
+      j++;
+  }
+  println(datax);
+  imax = j;
+  i = 0 ;
+
+  frameRate(20); // animation pas trop rapide pour avoir le temps de la voir ;)
+}
+
+void draw() {
+  float[] coordsx;
+  float[] coordsy;
+  int tmppos ;
+  coordsx = new float[3];
+  coordsy = new float[3];
+  tmppos = int(random(0, imax-1));
+  coordsx[0] = datax[tmppos];
+  coordsy[0] = datay[tmppos]; 
+  tmppos = int(random(0, imax-1));
+  coordsx[1] = datax[tmppos]; 
+  coordsy[1] = datay[tmppos]; 
+  tmppos = int(random(0, imax-1));
+  coordsx[2] = datax[tmppos]; 
+  coordsy[2] = datay[tmppos]; 
+
+  triangle(coordsx[0], coordsy[0], coordsx[1], coordsy[1], coordsx[2], coordsy[2]);
+    
+  if (frameCount > 200) noLoop();
+}
+</code></pre>

@@ -23,6 +23,7 @@ app.controller('indexController', ['$scope', '$route', 'p5', function($scope, $r
         {name: 'Cercle05 P5', sourceName: 'cercle05'},                
         {name: 'Cercle06 P5', sourceName: 'cercle06'},                
         {name: 'Cercle07 P5', sourceName: 'cercle07'},                
+        {name: 'Cercle07 Processing', sourceName: 'cercle07b'},                
         {name: 'P5 et Angular', sourceName: 'p5-angular'},                
     ];
 
