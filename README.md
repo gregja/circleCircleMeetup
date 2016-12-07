@@ -13,3 +13,5 @@ L'intégration du projet P5.js au sein d'Angular a été réalisée en utilisant
 Le code source de ce tutorial est publié sous License MIT.
 
 Le contenu pédagogique du tutorial est publié sous License Creative Commons n° 6 (BY SA).
+
+Lien vers la démo en ligne : http://backstages.gregphplab.com/circlecirclemeetup
