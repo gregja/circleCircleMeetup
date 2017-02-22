@@ -4,7 +4,8 @@ Ce projet a été réalisé dans le cadre du Meetup qui s'est déroulé le 5 dé
 
 Thème du meetup : "DU SON AVEC MAXMSP, DE L'ANIMATION AVEC P5 ET PROCESSING".
 
-Groupe organisateur de l'évènement : Code, Algorithm, Processing and Dream Paris
+Groupe organisateur de l'évènement : Creative Code Paris
+https://www.meetup.com/fr-FR/CreativeCodeParis/
 
 Ce tutorial a été réalisé en utilisant comme support le micro-framework de présentation développé par Aliaksandr Astashenkau et disponible sur son compte Github. Le socle de ce micro-framework repose sur Angular et Bootstrap.
 
